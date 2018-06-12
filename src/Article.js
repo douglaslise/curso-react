@@ -7,7 +7,16 @@ export default class Article extends Component {
     body: "",
     title: "Carregando"
   }
+
   componentDidMount(){
+    this.fetchPost()
+  }
+
+  componentDidUpdate(){
+    this.fetchPost()
+  }
+
+  fetchPost = () => {
     fetch(`https://jsonplaceholder.typicode.com/posts/${this.props.id}/`).then(response => {
       response.json().then(data => {
         this.setState({
@@ -17,6 +26,7 @@ export default class Article extends Component {
       })
     })
   }
+
   render(){
     const blocks = this.state.body.split("\n")
     return (
