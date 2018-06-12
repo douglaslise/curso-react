@@ -25,6 +25,7 @@ export default class ArticleList extends React.Component {
             this.state.articles.map((article,i) => {
               return (
                 <li id={article.id}>
+                  <img src={`https://placeimg.com/150/100/${article.id}`} alt=""/>
                   <Link to={`/article/${article.id}`}>
                     {article.title}
                   </Link>
