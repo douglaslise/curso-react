@@ -18,10 +18,6 @@ export default class NewComment extends React.Component {
   }
 
   handleSubmitClick = event => {
-    this.props.onNewComment({
-      user: this.state.name,
-      body: this.state.body
-
     this.setState(initialSstate)
   }
 

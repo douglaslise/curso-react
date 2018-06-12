@@ -8,7 +8,7 @@ export default class Article extends Component {
     title: "Carregando"
   }
   componentDidMount(){
-    fetch("https://jsonplaceholder.typicode.com/posts/1/").then(response => {
+    fetch(`https://jsonplaceholder.typicode.com/posts/${this.props.id}/`).then(response => {
       response.json().then(data => {
         this.setState({
           body: data.body,
