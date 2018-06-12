@@ -7,8 +7,8 @@ export default class Comments extends Component {
   render(){
     return (
       <section className="comments">
-        <SingleComment />
-        <SingleComment />
+        <SingleComment user="douglas" body="Comentário 1" />
+        <SingleComment user="pedro" body="Comentário 2"/>
       </section>)
   }
 }
