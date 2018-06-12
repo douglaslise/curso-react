@@ -9,8 +9,6 @@ class App extends Component {
     return (
       <div className="App">
         <Article />
-
-        <h2>Comentários</h2>
         <Comments />
       </div>
     );

@@ -18,13 +18,14 @@ export default class Article extends Component {
     })
   }
   render(){
+    const blocks = this.state.body.split("\n")
     return (
       <React.Fragment>
         <header className="header">
           <h1 className="title">{this.state.title}</h1>
         </header>
         <article className="body">
-          {this.state.body}
+          {blocks.map((block, i) => <p key={i}>{block}</p>)}
         </article>
       </React.Fragment>)
   }
